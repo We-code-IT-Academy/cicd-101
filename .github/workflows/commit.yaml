@@ -1,0 +1,13 @@
+name: deploy-pipeline
+run-name: ${{ github.actor }} pushed
+on:
+  push:
+    branches:    
+      - main
+
+steps:
+  - uses: actions/checkout@v1
+  - run: |
+    echo "A initial message"
+
+  - run: echo "One last message"
