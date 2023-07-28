@@ -12,5 +12,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: introduce the github action
+        run: |
+          cd ./shell_scripting/
+          chmod +x echo_introduction.sh
+          ./echo_introduction.sh
+
       - name: Ensure correct title
         run: cat portfolio_page/index.html | grep "Experienced Developer"
