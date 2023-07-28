@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Ensure correct title
-        run: cat portfolio_page/index.html | grep "Experienced Developere"
+        run: cat portfolio_page/index.html | grep "Experienced Developer"
