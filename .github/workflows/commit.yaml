@@ -1,16 +1,19 @@
 name: deploy-pipeline
-run-name: ${{ github.actor }} pushed
+
 on:
   push:
-    branches:    
+    branches:
       - main
 
 jobs:
   runMultipleCommands:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - run: |
-        echo "A initial message"
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-      - run: echo "One last message"
+      - name: Print Initial Message
+        run: echo "An initial message"
+
+      - name: Print Last Message
+        run: echo "One last message"
